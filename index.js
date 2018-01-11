@@ -74,7 +74,7 @@ client.on("chat", (channel, user, message, self) =>{
 						        if(rank=="bronze"){client.say("#skydrowdll", "Tu es Bronze avec "+elo+" elo.")}
 						        if(rank=="silver"){client.say("#skydrowdll", "Tu es Silver avec "+elo+" elo.")}
 						        if(rank=="gold"){client.say("#skydrowdll", "Tu es Gold avec "+elo+" elo.")}
-						        if(rank=="platin"){client.say("#skydrowdll", "Tu es Platin avec "+elo+" elo.")}
+						        if(rank=="platin"){client.say("#skydrowdll", "Tu es Platine avec "+elo+" elo.")}
 						        if(rank=="diams"){client.say("#skydrowdll", "Tu es Diams avec "+elo+" elo.")}
 						        if(rank=="master"){client.say("#skydrowdll", "Tu es Master avec "+elo+" elo. (tu déchire tous là! fais une pause non ? :p")}
 						        console.log("========")
