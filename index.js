@@ -98,19 +98,3 @@ client.on("chat", (channel, user, message, self) =>{
 
 
 
-/*
-var cloudscraper = require('cloudscraper');
-
-cloudscraper.get('https://agora.gg/profile/3806268/KoD_%20Skai-Ripa', function(error, response, body) {
-  if (error) {
-    console.log('Error occurred');
-  } else {
-    console.log(body, response);
-  }
-});
-
-*/
-
-
-
-
