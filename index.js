@@ -7,6 +7,8 @@
 
  ecrivez !agora nom_du_joueur
 
+
+
 */
 
 console.log("+============================+")
@@ -14,7 +16,6 @@ console.log("    Bot Twitch for get Elo")
 console.log("        By BlackSnow")
 console.log("+============================+")
 
-var langue = "english";
 var prefix = "!agora";
 var request = require("request")
 var tmi = require("tmi.js");
@@ -30,7 +31,7 @@ var options = {
 		username: "EloStore",
 		password: process.env.BOT_TOKEN // https://twitchapps.com - pour creer sa cle oauth twitch
 	},
-	channels: [process.env.NAME_CHANNEL]
+	channels: [process.env.BOT_CHANNEL]
 }
 var client = new tmi.client(options);
 client.connect();
@@ -38,7 +39,7 @@ client.connect();
 client.on("chat", (channel, user, message, self) =>{
 	if(self) return
 
-	if(channel = 'process.env.NAME_CHANNEL'){ // #skydrowdll - nom du channel
+	if(channel = 'process.env.BOT_CHANNEL'){ // #skydrowdll - nom du channel
 		var n = message.includes(prefix);
 		if(n){
 			mystring = message.replace(prefix+" ",'');
@@ -81,17 +82,17 @@ client.on("chat", (channel, user, message, self) =>{
 						    	var player_assist = objectValue['stats'][0]['assists'];
 						    	var player_ranky = objectValue['stats'][0]['rank'];
 							    
-						        if(langue == "english"){
+						        if(process.env.BOT_LANGUE == "english"){
 						    		if(elo>=0){rank = "Bronze"}
 							        if(elo>=1100){rank = "Silver"}
 							        if(elo>=1300){rank = "Gold"}
 							        if(elo>=1500){rank = "Platine"}
 							        if(elo>=1700){rank = "Diamond"}
 							        if(elo>=2200){rank = "Master"}
-						    		var mareponce = ""+player_name+" be "+rank+" with  "+elo+" elo, he played "+player_party_play+" party and wins "+player_party_wins+" of them, "+player_name+" massacred "+player_kill+" players with only "+player_death+" died, he shared "+player_assist+" enemy, which makes of him top "+player_ranky+" players.";
+						    		var mareponce = ""+player_name+" be "+rank+" with "+elo+" elo, he played "+player_party_play+" party and wins "+player_party_wins+" of them, "+player_name+" massacred "+player_kill+" players with only "+player_death+" died, he shared "+player_assist+" enemy, which makes of him top "+player_ranky+" players.";
 						    	}
 						    	
-						    	if(langue == "french"){
+						    	if(process.env.BOT_LANGUE == "french"){
 						    		if(elo>=0){rank = "Bronze"}
 							        if(elo>=1100){rank = "Silver"}
 							        if(elo>=1300){rank = "Gold"}
@@ -100,19 +101,19 @@ client.on("chat", (channel, user, message, self) =>{
 							        if(elo>=2200){rank = "Master"}
 						    		var mareponce = ""+player_name+" es "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partager "+player_assist+" ennemies, ce qui fait de lui "+player_ranky+" top joueurs.";
 						    	}
-						        client.say(process.env.NAME_CHANNEL, ""+mareponce)
+						        client.say(process.env.BOT_CHANNEL, ""+mareponce)
 
 							    
 							console.log("========")
 						        console.log(elo)
 						        console.log("========")
 						    }else{
-						    	client.say(process.env.NAME_CHANNEL, "Error")
+						    	client.say(process.env.BOT_CHANNEL, "Error")
 						    }
 						})
 
 			       }catch(err){
-			 			client.say(process.env.NAME_CHANNEL, "Le compte est privé ou le joueur en question n'existe pas!")
+			 			client.say(process.env.BOT_CHANNEL, "Le compte est privé ou le joueur en question n'existe pas!")
 			       }
 			    }
 			})
