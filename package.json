@@ -1,12 +1,13 @@
 {
-  "name": "Paragon-Custom",
-  "description": "Custom Creator for Paragon",
+  "name": "Twitch-bot-agora",
+  "description": "Getting elo in agora in twitch chat",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "discord.js": "11.1.0",
+    "tmi": "1.2.1",
     "request": "2.81.0"
   }
 }
