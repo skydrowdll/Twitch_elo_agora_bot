@@ -1,1 +1,12 @@
-
+{
+  "name": "Paragon-Custom",
+  "description": "Custom Creator for Paragon",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
+  }
+}
