@@ -72,13 +72,19 @@ client.on("chat", (channel, user, message, self) =>{
 						        if(elo>=1700){rank = "diams"}
 						        if(elo>=2200){rank = "master"}
 						        
-						        if(rank=="bronze"){client.say(''+process.env.NAME_CHANNEL, "Tu es Bronze avec "+elo+" elo.")}
-						        if(rank=="silver"){client.say(''+process.env.NAME_CHANNEL, "Tu es Silver avec "+elo+" elo.")}
-						        if(rank=="gold"){client.say(''+process.env.NAME_CHANNEL, "Tu es Gold avec "+elo+" elo.")}
-						        if(rank=="platin"){client.say(''+process.env.NAME_CHANNEL, "Tu es Platine avec "+elo+" elo.")}
-						        if(rank=="diams"){client.say(''+process.env.NAME_CHANNEL, "Tu es Diams avec "+elo+" elo.")}
-						        if(rank=="master"){client.say(''+process.env.NAME_CHANNEL, "Tu es Master avec "+elo+" elo. (tu déchire tous là! fais une pause non ? :p")}
-						        console.log("========")
+						       	var player_name = objectValue['name'];
+						    	var player_party_play = objectValue['stats'][0]['gamesPlayed'];
+						    	var player_party_wins = objectValue['stats'][0]['wins'];
+						    	var player_kill = objectValue['stats'][0]['kills'];
+						    	var player_death = objectValue['stats'][0]['deaths'];
+						    	var player_assist = objectValue['stats'][0]['assists'];
+						    	var player_ranky = objectValue['stats'][0]['rank'];
+						        var mareponce = ""+player_name+" es "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partager "+player_assist+" ennemies, ce qui fait de lui "+player_ranky+" top joueurs.";
+
+						        client.say("#skydrowdll", ""+mareponce)
+
+							    
+							console.log("========")
 						        console.log(elo)
 						        console.log("========")
 						    }else{
