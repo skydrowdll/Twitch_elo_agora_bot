@@ -14,6 +14,7 @@ console.log("    Bot Twitch for get Elo")
 console.log("        By BlackSnow")
 console.log("+============================+")
 
+var langue = "english";
 var prefix = "!agora";
 var request = require("request")
 var tmi = require("tmi.js");
@@ -79,8 +80,26 @@ client.on("chat", (channel, user, message, self) =>{
 						    	var player_death = objectValue['stats'][0]['deaths'];
 						    	var player_assist = objectValue['stats'][0]['assists'];
 						    	var player_ranky = objectValue['stats'][0]['rank'];
-						        var mareponce = ""+player_name+" es "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partager "+player_assist+" ennemies, ce qui fait de lui top "+player_ranky+" joueurs.";
-
+							    
+						        if(langue == "english"){
+						    		if(elo>=0){rank = "Bronze"}
+							        if(elo>=1100){rank = "Silver"}
+							        if(elo>=1300){rank = "Gold"}
+							        if(elo>=1500){rank = "Platine"}
+							        if(elo>=1700){rank = "Diamond"}
+							        if(elo>=2200){rank = "Master"}
+						    		var mareponce = ""+player_name+" be "+rank+" with  "+elo+" elo, he played "+player_party_play+" party and wins "+player_party_wins+" of them, "+player_name+" massacred "+player_kill+" players with only "+player_death+" died, he shared "+player_assist+" enemy, which makes of him top "+player_ranky+" players.";
+						    	}
+						    	
+						    	if(langue == "french"){
+						    		if(elo>=0){rank = "Bronze"}
+							        if(elo>=1100){rank = "Silver"}
+							        if(elo>=1300){rank = "Gold"}
+							        if(elo>=1500){rank = "Platine"}
+							        if(elo>=1700){rank = "Diams"}
+							        if(elo>=2200){rank = "Master"}
+						    		var mareponce = ""+player_name+" es "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partager "+player_assist+" ennemies, ce qui fait de lui "+player_ranky+" top joueurs.";
+						    	}
 						        client.say(process.env.NAME_CHANNEL, ""+mareponce)
 
 							    
