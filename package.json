@@ -8,9 +8,7 @@
   "author": "BlackSnow",
   "license": "MIT",
   "dependencies": {
+    "tmi": "1.1.1",
     "request": "2.81.0"
-  }
-   "engines": {
-    "node": "4.1.1"
   }
 }
