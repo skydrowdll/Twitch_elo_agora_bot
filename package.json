@@ -1,5 +1,5 @@
 {
-  "name": "Twitch-bot-agora",
+  "name": "Twitch-Bot-agora",
   "description": "Getting elo in agora in twitch chat",
   "main": "index.js",
   "scripts": {
