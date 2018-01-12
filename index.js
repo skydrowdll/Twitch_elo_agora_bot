@@ -15,7 +15,6 @@ console.log("+============================+")
 
 var prefix = "!agora";
 var request = require("request")
-const utf8 = require('utf8');
 var tmi = require("tmi.js");
 
 var options = {
@@ -27,7 +26,7 @@ var options = {
 	},
 	identity: {
 		username: "EloStore",
-		password: "oauth:xxxxxxxxxxxxxxxxxxxxx" // https://twitchapps.com - pour creer sa cle oauth twitch
+		password: process.env.BOT_TOKEN // https://twitchapps.com - pour creer sa cle oauth twitch
 	},
 	channels: ['#skydrowdll']
 }
@@ -41,7 +40,8 @@ client.on("chat", (channel, user, message, self) =>{
 		var n = message.includes(prefix);
 		if(n){
 			mystring = message.replace(prefix+" ",'');
-			var url = utf8.encode('https://api.agora.gg/v1/players/search?name='+mystring);
+			mystring = mystring.replace(prefix+" ",'%20');
+			var url = 'https://api.agora.gg/v1/players/search?name='+mystring;
 			request({
 			    url: url,
 			    json: true
