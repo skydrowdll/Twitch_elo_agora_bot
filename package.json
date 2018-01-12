@@ -5,9 +5,12 @@
   "scripts": {
     "start": "node index.js"
   },
+  "author": "BlackSnow",
+  "license": "MIT",
   "dependencies": {
-    "discord.js": "11.1.0",
-    "tmi": "1.2.1",
     "request": "2.81.0"
+  }
+   "engines": {
+    "node": "4.1.1"
   }
 }
