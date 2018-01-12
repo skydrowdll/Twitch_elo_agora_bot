@@ -4,7 +4,7 @@
 	Bot Twitch for get Elo
 		   By BlackSnow
 +============================+
-
+ecrivez !agora nom_du_joueur
 
 */
 
