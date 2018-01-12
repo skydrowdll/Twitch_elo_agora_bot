@@ -39,7 +39,7 @@ client.connect();
 client.on("chat", (channel, user, message, self) =>{
 	if(self) return
 
-	if(channel = 'process.env.BOT_CHANNEL'){ // #skydrowdll - nom du channel
+	if(channel == 'process.env.BOT_CHANNEL'){ // #skydrowdll - nom du channel
 		var n = message.includes(prefix);
 		if(n){
 			mystring = message.replace(prefix+" ",'');
