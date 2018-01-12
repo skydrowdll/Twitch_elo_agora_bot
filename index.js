@@ -81,7 +81,7 @@ client.on("chat", (channel, user, message, self) =>{
 						    	var player_ranky = objectValue['stats'][0]['rank'];
 						        var mareponce = ""+player_name+" es "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partager "+player_assist+" ennemies, ce qui fait de lui "+player_ranky+" top joueurs.";
 
-						        client.say("#skydrowdll", ""+mareponce)
+						        client.say(process.env.NAME_CHANNEL, ""+mareponce)
 
 							    
 							console.log("========")
