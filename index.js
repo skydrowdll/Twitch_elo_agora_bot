@@ -13,7 +13,7 @@
 
 var cloudscraper = require('cloudscraper');
 
-cloudscraper.get('https://agora.gg/profile/3806268/KoD_%20Skai-Ripa', function(error, response, body) {
+cloudscraper.get('https://api.agora.gg/v1/players/3806268', function(error, response, body) {
   if (error) {
     console.log('Error occurred');
   } else {
