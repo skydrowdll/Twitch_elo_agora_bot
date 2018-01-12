@@ -65,12 +65,12 @@ client.on("chat", (channel, user, message, self) =>{
 						        var elo = Math.round(responder2 * 100) / 100;
 						        var rank = "nop";
 
-						        if(elo>=0){rank = "bronze"}
-						        if(elo>=1100){rank = "silver"}
-						        if(elo>=1300){rank = "gold"}
-						        if(elo>=1500){rank = "platin"}
-						        if(elo>=1700){rank = "diams"}
-						        if(elo>=2200){rank = "master"}
+						        if(elo>=0){rank = "Bronze"}
+						        if(elo>=1100){rank = "Silver"}
+						        if(elo>=1300){rank = "Gold"}
+						        if(elo>=1500){rank = "Platine"}
+						        if(elo>=1700){rank = "Diams"}
+						        if(elo>=2200){rank = "Master"}
 						        
 						       	var player_name = objectValue['name'];
 						    	var player_party_play = objectValue['stats'][0]['gamesPlayed'];
