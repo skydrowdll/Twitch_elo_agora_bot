@@ -91,7 +91,7 @@ client.on("chat", (channel, user, message, self) =>{
 						    	var player_death = objectValue['stats'][0]['deaths'];
 						    	var player_assist = objectValue['stats'][0]['assists'];
 						    	var player_ranky = objectValue['stats'][0]['rank'];
-							    
+							var responder = responder.replace(" ",'%20');    
 						        if(process.env.BOT_LANGUE == "english"){
 						    		if(elo>=0){rank = "Bronze"}
 							        if(elo>=1100){rank = "Silver"}
