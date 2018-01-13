@@ -99,7 +99,7 @@ client.on("chat", (channel, user, message, self) =>{
 							        if(elo>=1500){rank = "Platine"}
 							        if(elo>=1700){rank = "Diamond"}
 							        if(elo>=2200){rank = "Master"}
-						    		var mareponce = ""+player_name+" be "+rank+" with "+elo+" elo, he played "+player_party_play+" party and wins "+player_party_wins+" of them, "+player_name+" massacred "+player_kill+" players with only "+player_death+" died, he shared "+player_assist+" enemy, which makes of him top "+player_ranky+" players. https://agora.gg/profile/"+responder+"/"+player_name2;
+						    		var mareponce = ""+player_name+" be "+rank+" with "+elo+" elo, he played "+player_party_play+" party and wins "+player_party_wins+" of them, "+player_name+" massacred "+player_kill+" players with only "+player_death+" died, he shared "+player_assist+" enemy, which makes of him top "+player_ranky+" players. ";
 						    	}
 						    	
 						    	if(process.env.BOT_LANGUE == "french"){
@@ -109,7 +109,7 @@ client.on("chat", (channel, user, message, self) =>{
 							        if(elo>=1500){rank = "Platine"}
 							        if(elo>=1700){rank = "Diams"}
 							        if(elo>=2200){rank = "Master"}
-						    		var mareponce = ""+player_name+" est "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partagé "+player_assist+" ennemies, ce qui fait de lui top "+player_ranky+" joueurs. https://agora.gg/profile/"+responder+"/"+player_name2;
+						    		var mareponce = ""+player_name+" est "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partagé "+player_assist+" ennemies, ce qui fait de lui top "+player_ranky+" joueurs.";
 						    	}
 						        client.say(process.env.BOT_CHANNEL, ""+mareponce)
 
