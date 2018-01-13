@@ -109,7 +109,7 @@ client.on("chat", (channel, user, message, self) =>{
 							        if(elo>=1500){rank = "Platine"}
 							        if(elo>=1700){rank = "Diams"}
 							        if(elo>=2200){rank = "Master"}
-						    		var mareponce = ""+player_name+" est "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partager "+player_assist+" ennemies, ce qui fait de lui "+player_ranky+" top joueurs.";
+						    		var mareponce = ""+player_name+" est "+rank+" avec "+elo+" elo, il a joué à "+player_party_play+" parti et en a gagné "+player_party_wins+", "+player_name+" a massacré "+player_kill+" joueurs au dépourvu de "+player_death+" morts, il a tout de même partagé "+player_assist+" ennemies, ce qui fait de lui "+player_ranky+" top joueurs.";
 						    	}
 						        client.say(process.env.BOT_CHANNEL, ""+mareponce)
 
